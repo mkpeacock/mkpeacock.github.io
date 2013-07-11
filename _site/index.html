@@ -1,175 +1,255 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
+    <!-- Title -->
     <title>Hello World!</title>
     
     <meta name="author" content="Name Lastname">
-
-    <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description, Keywords -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Google web fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- Stylesheets -->
+    <link href="/assets/style/bootstrap.css" rel="stylesheet">
+    <link href="/assets/style/flexslider.css" rel="stylesheet">
+    <link href="/assets/style/prettyPhoto.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style/font-awesome.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/style/font-awesome-ie7.css">
     <![endif]-->
+    <link href="/assets/style/style.css" rel="stylesheet">
+    <!-- Color Stylesheet - orange, blue, pink, brown, red or green-->
+    <link href="/assets/style/blue.css" rel="stylesheet">
+    <link href="/assets/style/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- Le styles -->
-    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-
-    <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
-
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
-  </head>
-
-  <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container-narrow">
-          <a class="brand" href="/">Michael Peacock</a>
-          <ul class="nav">
-            
-            
-            
-
-
-  
-    
-      
-      	
-      	<li><a href="/archive.html">Archive</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/categories.html">Categories</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages.html">Pages</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags.html">Tags</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/talks.html">Talks</a></li>
-      	
-      
-    
-  
-
-
-
-          </ul>
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shim.js"></script>
+    <![endif]-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.png">
+</head>
+<body>
+<!-- Header starts -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <!-- Logo and site link -->
+                    <div class="logo">
+                        <h1><a href="index.html">Michael Peacock<span class="color">.</span></a></h1>
+                    </div>
+                </div>
+                <div class="span4 offset2">
+                    <div class="list">
+                       <!-- Add your phone number here -->
+                       <div class="phone">
+                          <i class="icon-twitter"></i> @michaelpeacock
+                       </div>
+                       <hr />
+                       <!-- Add your email id here -->
+                       <div class="email">
+                          <i class="icon-envelope-alt"></i> mkpeacock@gmail.com
+                       </div>
+                       <hr />
+                       <!-- Add your address here -->
+                       <div class="address">
+                          <i class="icon-linkedin"></i> <i class="icon-facebook"></i> <i class="icon-twitter"></i> <i class="icon-github"></i> Elsewhere
+                       </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </header>
+
+
+<!-- Header ends -->
+
+<!-- Navigation Starts -->
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>
+                <div class="nav-collapse collapse">
+                <!-- Navigation links starts here -->
+                    <ul class="nav">
+                        <!-- Main menu -->
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/talks.html">Talks</a></li>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/open-source.html">Open source</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Navigation Ends -->
 
-    <div class="container-narrow">
+<!-- Content strats -->
 
-      <div class="content">
-        
-<div class="page-header">
-  <h1>Hello World!  <small>Supporting tagline</small></h1>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                     <div class="about-hero">
+                        <p>
+                            Hi. I'm Michael, <span class="hightlight">CTO at Ground Six</span>, Lead Developer, Author, Technical Reviewer and occasional Speaker.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8">
+                   <h3>From the blog</h3>
+                    <div class="posts blog">
+                        <div class="entry">
+                            <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
+                        </div>
+                        <div class="entry">
+                            <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
+                        </div>
+                        <div class="entry">
+                            <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 offset1">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="service">
+
+                            <h5><span><i class="icon-cloud"></i> Consultancy Services</span></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant fames ac turpis. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <!-- Recent post starts. Note down the class name before editing. -->
+            <div class="rposts">
+               <h4>Recent Achievements</h4>
+               <div class="row">
+                  <div class="span6">
+                     <!-- Recent post 1. Class name should be "rpost1" -->
+                     <div class="rpost1">
+                        <!-- Image -->
+                        <div class="rimg">
+                           <img src="/assets/images/confoo.jpg" alt="" />
+                        </div>
+                        <!-- Title & Para -->
+                        <div class="rdetails">
+                           <h5>Team Development with Vagrant</h5>
+                           <p>Duis vulputate consectetur malesuada et in dictum nisi vehicula.</p>
+                        </div>
+                     </div>
+                     <!-- Recent post 2. Class name should be "rpost2" -->
+                     <div class="rpost2">
+                        <div class="rimg">
+                           <img src="/assets/images/phpukconf.jpg" alt="" />
+                        </div>
+                        <div class="rdetails">
+                           <h5>Cutting your teeth with iOS</h5>
+                           <p>Duis vulputate consectetur malesuada et netus et in dictum nisi vehicula.</p>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="span6">
+                     <!-- Recent post 3. Class name should be "rpost1" -->
+                     <div class="rpost1">
+                        <div class="rimg">
+                           <img src="/assets/images/dpc12.jpg" alt="" />
+                        </div>
+                        <div class="rdetails">
+                           <h5>Refactoring to Symfony Components</h5>
+                           <p>Duis vulputate consectetur malesuada et in dictum nisi vehicula.</p>
+                        </div>
+                     </div>
+                     <!-- Recent post 4. Class name should be "rpost2" -->
+                     <div class="rpost2">
+                        <div class="rimg">
+                           <img src="/assets/img/photos/r4.jpg" alt="" />
+                        </div>
+                        <div class="rdetails">
+                           <h5>Drupal 7 Social Networking</h5>
+                           <p>Duis vulputate consectetur malesuada et netus et in dictum nisi vehicula.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Recent post ends -->
+
+
+    </div>
 </div>
 
-<div class="row-fluid">
-  <div class="span12">
-    <p>Read <a href='http://jekyllbootstrap.com/usage/jekyll-quick-start.html'>Jekyll Quick Start</a>a</p>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+         <!-- Widget 1 -->
+         <div class="widget">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum dolor eget nisi fermentum quis hendrerit magna vestibulum. </p>
+             <ul>
+               <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
+               <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
+             </ul>
+         </div>
+      </div>
+      <div class="span4">
+         <!-- Widget 2 -->
+         <div class="widget">
+            <h4>Recent Posts</h4>
+               <ul>
+                  <li><a href="#">Recent post</a></li>
+               </ul>
+         </div>
+      </div>
+      <div class="span4">
+         <!-- Widget 3 -->
+         <div class="widget">
+            <h4>Categories</h4>
+            <ul>
+               <li><a href="#">Category</a></li>
+            </ul>
+         </div>
+      </div>
 
-<p>Complete usage and documentation available at: <a href='http://jekyllbootstrap.com'>Jekyll Bootstrap</a></p>
-
-<h2 id='update_author_attributes'>Update Author Attributes</h2>
-
-<p>In <code>_config.yml</code> remember to specify your own data:</p>
-
-<pre><code>title : My Blog =)
-
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username</code></pre>
-
-<p>The theme should reference these variables whenever needed.</p>
-
-<h2 id='sample_posts'>Sample Posts</h2>
-
-<p>This blog contains sample posts which help stage pages and blog data. When you don&#8217;t need the samples anymore just delete the <code>_posts/core-samples</code> folder.</p>
-
-<pre><code>$ rm -rf _posts/core-samples</code></pre>
-
-<p>Here&#8217;s a sample &#8220;posts list&#8221;.</p>
-<ul class='posts'>
-  
-    <li><span>04 Sep 2012</span> &raquo; <a href='/tech/2012/09/04/accessing-internal-servers-remotely-via-tunnelling'>Accessing Internal Servers Remotely Via Tunnelling</a></li>
-  
-    <li><span>29 Dec 2011</span> &raquo; <a href='/lessons/2011/12/29/jekyll-introduction'>Jekyll Introduction</a></li>
-  
-</ul>
-<h2 id='todo'>To-Do</h2>
-
-<p>This theme is still unfinished. If you&#8217;d like to be added as a contributor, <a href='http://github.com/plusjade/jekyll-bootstrap'>please fork</a>! We need to clean up the themes, make theme usage guides with theme-specific markup examples.</p>
+      <div class="span12"><hr /><p class="copy">
+               Copyright &copy; <a href="http://www.michaelpeacock.co.uk">Michael Peacock</a></p></div>
+    </div>
   </div>
-</div>
+</footer>
 
-
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; 2013 Name Lastname
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-      </footer>
-
-    </div>
-
-    
-  </body>
+<!-- JS -->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script src="/assets/js/jquery.flexslider-min.js"></script>
+<script src="/assets/js/jquery.isotope.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/filter.js"></script>
+<script src="/assets/js/custom.js"></script>
+</body>
 </html>
+
+
 
