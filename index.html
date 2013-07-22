@@ -44,57 +44,58 @@ title: Michael Peacock
 
 
         <!-- Recent post starts. Note down the class name before editing. -->
-            <div class="rposts">
-               <h4>Recent Achievements</h4>
-               <div class="row">
-                  <div class="span6">
-                     <!-- Recent post 1. Class name should be "rpost1" -->
-                     <div class="rpost1">
-                        <!-- Image -->
-                        <div class="rimg">
-                           <img src="/assets/images/confoo.jpg" alt="" />
-                        </div>
-                        <!-- Title & Para -->
-                        <div class="rdetails">
-                           <h5>Team Development with Vagrant</h5>
-                           <p>Duis vulputate consectetur malesuada et in dictum nisi vehicula.</p>
-                        </div>
-                     </div>
-                     <!-- Recent post 2. Class name should be "rpost2" -->
-                     <div class="rpost2">
-                        <div class="rimg">
-                           <img src="/assets/images/phpukconf.jpg" alt="" />
-                        </div>
-                        <div class="rdetails">
-                           <h5>Cutting your teeth with iOS</h5>
-                           <p>Duis vulputate consectetur malesuada et netus et in dictum nisi vehicula.</p>
-                        </div>
-                     </div>
+        {% assign counter = 0 %}
+        {% for post in site.posts %}
+            {% if post.type =='book' or post.type =='talk' %}
+                {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
+            {% endif %}
+        {% endfor %}
 
-                  </div>
-                  <div class="span6">
-                     <!-- Recent post 3. Class name should be "rpost1" -->
-                     <div class="rpost1">
-                        <div class="rimg">
-                           <img src="/assets/images/dpc12.jpg" alt="" />
-                        </div>
-                        <div class="rdetails">
-                           <h5>Refactoring to Symfony Components</h5>
-                           <p>Duis vulputate consectetur malesuada et in dictum nisi vehicula.</p>
-                        </div>
-                     </div>
-                     <!-- Recent post 4. Class name should be "rpost2" -->
-                     <div class="rpost2">
-                        <div class="rimg">
-                           <img src="/assets/img/photos/r4.jpg" alt="" />
-                        </div>
-                        <div class="rdetails">
-                           <h5>Drupal 7 Social Networking</h5>
-                           <p>Duis vulputate consectetur malesuada et netus et in dictum nisi vehicula.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+        {% assign maincounter = 1 %}
+            <div class="rposts">
+                <h4>Recent Achievements</h4>
+                 {% assign colcount = 1 %}
+                    {% for post in site.posts %}
+                        {% if post.type == 'book' or post.type == 'talk' %}
+                            {% assign main_mod_4 = maincounter|modulo:4 %}
+                            {% assign main_mod_2 = maincounter|modulo:2 %}
+                            {% assign main_mod_3 = maincounter|modulo:3 %}
+                            {% assign main_mod_5 = maincounter|modulo:5 %}
+                            {% assign main_mod_6 = maincounter|modulo:6 %}
+
+                            {% if colcount == 1 or colcount == '1' %}
+                                <div class="row"> <!-- if maincounter == 0 or maincounter|modulo:4 == 0  -->
+                            {% endif %}
+                            {% if colcount == 1 or colcount == '1' or colcount == '3' %}
+                                    <div class="span6">
+                                        <div class="rpost1">
+                            {% else %}
+                                        <div class="rpost2">
+                            {% endif %}
+                                            <!-- Image -->
+                                            <div class="rimg">
+                                               <img src="{{ post.image }}" alt="" />
+                                            </div>
+                                            <!-- Title & Para -->
+                                            <div class="rdetails">
+                                               <h5>{{ post.title }} {{maincounter}} {{ maincounter|modulo:3}} {{counter}} a {{colcount}}</h5>
+                                               <p>{{ post.summary }}</p>
+                                            </div>
+
+                                        </div>
+                            {% if colcount == '2' or colcount == '4' or maincounter == counter %}
+                                    </div>
+                            {% endif %}
+
+                            {% if maincounter == counter or colcount == '4' %}
+                                {% capture colcount %}{{ colcount | minus:3 }}{% endcapture %}
+                                </div> <!-- if maincounter|modulo:3 == 0 or maincounter == counter  -->
+                            {% else %}
+                                {% capture colcount %}{{ colcount | plus:1 }}{% endcapture %}
+                            {% endif %}
+                            {% capture maincounter %}{{ maincounter | plus:1 }}{% endcapture %}
+                        {% endif %}
+               {% endfor %}
             </div>
 
             <!-- Recent post ends -->
