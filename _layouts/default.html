@@ -109,12 +109,8 @@
       <div class="span4">
          <!-- Widget 1 -->
          <div class="widget">
-            <h4>About Us</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum dolor eget nisi fermentum quis hendrerit magna vestibulum. </p>
-             <ul>
-               <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
-               <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
-             </ul>
+            <h4>About Michael Peacock</h4>
+            <p>Michael is the Chief Technical Officer at Ground Six, a seasoned senior / lead developer. He is also an author with 7 books with Packt publishing, a technical reviewer and he occasionally speaks at user groups and conferences on technical subjects.</p>
          </div>
       </div>
       <div class="span4">
@@ -122,7 +118,13 @@
          <div class="widget">
             <h4>Recent Posts</h4>
                <ul>
-                  <li><a href="#">Recent post</a></li>
+                {% assign blog_counter=0 %}
+                {% for post in site.posts %}
+                    {% if post.type == 'blog' and blog_counter < 2 %}
+                        <li><a href="{{post.url}}">{{post.title}}</a></li>
+                        {% assign blog_counter=counter | plus:1 %}
+                    {% endif %}
+               {% endfor %}
                </ul>
          </div>
       </div>

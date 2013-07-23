@@ -17,15 +17,15 @@ title: Michael Peacock
                 <div class="span8">
                    <h3>From the blog</h3>
                     <div class="posts blog">
-                        <div class="entry">
-                            <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
-                        </div>
-                        <div class="entry">
-                            <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
-                        </div>
-                        <div class="entry">
-                            <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
-                        </div>
+                        {% assign blog_counter=0 %}
+                        {% for post in site.posts %}
+                            {% if post.type == 'blog' and blog_counter < 2 %}
+                                <div class="entry">
+                                    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+                                </div>
+                                {% assign blog_counter=counter | plus:1 %}
+                            {% endif %}
+                       {% endfor %}
                     </div>
                 </div>
                 <div class="span3 offset1">
@@ -33,8 +33,8 @@ title: Michael Peacock
                     <div class="row">
                         <div class="service">
 
-                            <h5><span><i class="icon-cloud"></i> Consultancy Services</span></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant fames ac turpis. </p>
+                            <!-- <h5><span><i class="icon-cloud"></i> Consultancy Services</span></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant fames ac turpis. </p> -->
                         </div>
                     </div>
                 </div>
@@ -57,11 +57,6 @@ title: Michael Peacock
                  {% assign colcount = 1 %}
                     {% for post in site.posts %}
                         {% if post.type == 'book' or post.type == 'talk' %}
-                            {% assign main_mod_4 = maincounter|modulo:4 %}
-                            {% assign main_mod_2 = maincounter|modulo:2 %}
-                            {% assign main_mod_3 = maincounter|modulo:3 %}
-                            {% assign main_mod_5 = maincounter|modulo:5 %}
-                            {% assign main_mod_6 = maincounter|modulo:6 %}
 
                             {% if colcount == 1 or colcount == '1' %}
                                 <div class="row"> <!-- if maincounter == 0 or maincounter|modulo:4 == 0  -->
@@ -78,7 +73,7 @@ title: Michael Peacock
                                             </div>
                                             <!-- Title & Para -->
                                             <div class="rdetails">
-                                               <h5>{{ post.title }} {{maincounter}} {{ maincounter|modulo:3}} {{counter}} a {{colcount}}</h5>
+                                               <h5>{{ post.title }}</h5>
                                                <p>{{ post.summary }}</p>
                                             </div>
 
