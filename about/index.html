@@ -1,0 +1,99 @@
+---
+layout: default
+title: Michael Peacock
+---
+
+<div class="container">
+            <div class="row">
+                <div class="span12">
+                     <div class="about-hero">
+                        <p>
+                            Hi. I'm Michael, <span class="hightlight">CTO at Ground Six</span>, Lead Developer, Author, Technical Reviewer and occasional Speaker.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8">
+                   <h3>From the blog</h3>
+                    <div class="posts blog">
+                        {% assign blog_counter=0 %}
+                        {% for post in site.posts %}
+                            {% if post.type == 'blog' and blog_counter < 2 %}
+                                <div class="entry">
+                                    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+                                </div>
+                                {% assign blog_counter=counter | plus:1 %}
+                            {% endif %}
+                       {% endfor %}
+                    </div>
+                </div>
+                <div class="span3 offset1">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="service">
+
+                            <!-- <h5><span><i class="icon-cloud"></i> Consultancy Services</span></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant fames ac turpis. </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <!-- Recent post starts. Note down the class name before editing. -->
+        {% assign counter = 0 %}
+        {% for post in site.posts %}
+            {% if post.type =='book' or post.type =='talk' %}
+                {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
+            {% endif %}
+        {% endfor %}
+
+        {% assign maincounter = 1 %}
+            <div class="rposts">
+                <h4>Recent Achievements</h4>
+                 {% assign colcount = 1 %}
+                    {% for post in site.posts %}
+                        {% if post.type == 'book' or post.type == 'talk' %}
+
+                            {% if colcount == 1 or colcount == '1' %}
+                                <div class="row"> <!-- if maincounter == 0 or maincounter|modulo:4 == 0  -->
+                            {% endif %}
+                            {% if colcount == 1 or colcount == '1' or colcount == '3' %}
+                                    <div class="span6">
+                                        <div class="rpost1">
+                            {% else %}
+                                        <div class="rpost2">
+                            {% endif %}
+                                            <!-- Image -->
+                                            <div class="rimg">
+                                               <img src="{{ post.image }}" alt="" />
+                                            </div>
+                                            <!-- Title & Para -->
+                                            <div class="rdetails">
+                                               <h5>{{ post.title }}</h5>
+                                               <p>{{ post.summary }}</p>
+                                            </div>
+
+                                        </div>
+                            {% if colcount == '2' or colcount == '4' or maincounter == counter %}
+                                    </div>
+                            {% endif %}
+
+                            {% if maincounter == counter or colcount == '4' %}
+                                {% capture colcount %}{{ colcount | minus:3 }}{% endcapture %}
+                                </div> <!-- if maincounter|modulo:3 == 0 or maincounter == counter  -->
+                            {% else %}
+                                {% capture colcount %}{{ colcount | plus:1 }}{% endcapture %}
+                            {% endif %}
+                            {% capture maincounter %}{{ maincounter | plus:1 }}{% endcapture %}
+                        {% endif %}
+               {% endfor %}
+            </div>
+
+            <!-- Recent post ends -->
+
+
+    </div>
