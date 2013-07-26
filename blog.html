@@ -20,8 +20,7 @@ title: Your New Jekyll Site
                               <!-- Post one -->
                               {% for post in site.posts %}
                               		<div class="entry">
-	                                 <h2><a href="#">Sed justo scelerisque ut consectetur</a></h2>
-	                                 <!-- Meta details -->
+	                                 <h2><a href="{{post.url}}">{{post.title}}</a></h2>
 	                                 <div class="meta">
 	                                    <i class="icon-calendar"></i> 26-2-2012 <i class="icon-user"></i> Admin <i class="icon-folder-open"></i> <a href="#">General</a> <span class="pull-right"><i class="icon-comment"></i> <a href="#">2 Comments</a></span>
 	                                 </div>
