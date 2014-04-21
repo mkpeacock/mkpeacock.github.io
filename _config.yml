@@ -1,0 +1,6 @@
+url: http://michaelpeacock.co.uk
+google_analytics_id: UA-12100402-1
+
+paginate: 10
+paginate_path: "blog/page/:num"
+permalink: /blog/:year/:month/:day/:title/
