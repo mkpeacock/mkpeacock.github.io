@@ -1,4 +1,5 @@
-url: http://michaelpeacock.co.uk
+url: https://michaelpeacock.co.uk
+enforce_ssl: michaelpeacock.co.uk
 google_analytics_id: UA-12100402-1
 
 paginate: 10
