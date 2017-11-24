@@ -1,9 +1,10 @@
 ---
-layout: home
+layout: page
 ---
+<div class="wrapper container main-content-wrapper">
 
-    <div class="container">
-        <h2>Blog</h2>
+    <section class="section">
+        <h2 class="section-title">Blog</h2>
         {% for post in paginator.posts %}
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             <p>{{ post.excerpt|strip_html }}</p>
@@ -21,4 +22,5 @@ layout: home
           <li class="next disabled"><span>Next</span></li>
             {% endif %}
         </ul>
-    </div>
+    </section>
+</div>

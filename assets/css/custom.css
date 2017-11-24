@@ -1,0 +1,33 @@
+.menu-left {
+    display: none !important;
+}
+
+.fixed .menu-left,
+.static .menu-left {
+    display: flex !important;
+}
+
+.fixed .menu-right,
+.static .menu-right {
+    margin-top: 25px;
+}
+
+.top-bar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #3F51B5;
+  padding-bottom: 20px;
+}
+
+.top-bar.static {
+  width: 100%;
+  background: #3F51B5;
+  padding-bottom: 20px;
+}
+
+.portfolio-section--organisations .item-inner .content {
+    padding-bottom: 20px;
+}
